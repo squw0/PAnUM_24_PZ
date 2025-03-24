@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Tempo biegu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twoje tempo (min/km): " />
+
+        <EditText
+            android:id="@+id/tempoInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:hint="np. 5.30"
+            android:digits="0123456789." />
+    </LinearLayout>
+
+    <!-- Dystans -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dystans (km): " />
+
+        <EditText
+            android:id="@+id/dystansInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:hint="np. 10.5"
+            android:digits="0123456789." />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/obliczButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/predkoscOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prędkość: -"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/maratonOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Czas na maraton: -"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/polmaratonOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Czas na półmaraton: -"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/dystansOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Czas na dystans: -"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
