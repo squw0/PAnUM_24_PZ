@@ -26,62 +26,77 @@ public class MainActivity extends AppCompatActivity {
 
     public void OnClickNumericButton(View view) {
         TextView textViewArabic = findViewById(R.id.ScreenArabic);
+        TextView textViewRoman = findViewById(R.id.ScreenRoman); // Nowe pole do aktualizacji wyniku
         String text = textViewArabic.getText().toString();
 
         if (view.getId() == R.id.Button_9)
-            text = text + "9";
+            text += "9";
         if (view.getId() == R.id.Button_8)
-            text = text + "8";
+            text += "8";
         if (view.getId() == R.id.Button_7)
-            text = text + "7";
+            text += "7";
         if (view.getId() == R.id.Button_6)
-            text = text + "6";
+            text += "6";
         if (view.getId() == R.id.Button_5)
-            text = text + "5";
+            text += "5";
         if (view.getId() == R.id.Button_4)
-            text = text + "4";
+            text += "4";
         if (view.getId() == R.id.Button_3)
-            text = text + "3";
+            text += "3";
         if (view.getId() == R.id.Button_2)
-            text = text + "2";
+            text += "2";
         if (view.getId() == R.id.Button_1)
-            text = text + "1";
+            text += "1";
 
-        // to musi kasować wszystko
         if (view.getId() == R.id.Button_CE)
             text = "";
 
         if (view.getId() == R.id.Button_0)
-            text = text + "0";
+            text += "0";
 
-        // to powinno kasować jedno
-        if (view.getId() == R.id.Button_DEL) {
-            if (text.length() > 0) {
-                text = text.substring(0, text.length() - 1);
-            }
+        if (view.getId() == R.id.Button_DEL && text.length() > 0) {
+            text = text.substring(0, text.length() - 1);
         }
-        textViewArabic.setText(text1);
+
+        textViewArabic.setText(text);
+
+        if (!text.isEmpty()) {
+            Converter converter = new Converter(text, this);
+            String roman = converter.arabicToR();
+            textViewRoman.setText(roman != null ? roman : "Błąd");
+        } else {
+            textViewRoman.setText("");
+        }
     }
-}
-public void OnClickRomanButton(View view) {
-    TextView textViewRoman = findViewById(R.id.ScreenRoman);
-    String text = textViewRoman.getText().toString();
+
+    public void OnClickRomanButton(View view) {
+        TextView textViewRoman = findViewById(R.id.ScreenRoman);
+        TextView textViewArabic = findViewById(R.id.ScreenArabic);
+        String text = textViewRoman.getText().toString();
 
         if (view.getId() == R.id.Button_I)
-            text = text + "I";
+            text += "I";
         if (view.getId() == R.id.Button_V)
-            text = text + "V";
+            text += "V";
         if (view.getId() == R.id.Button_X)
-            text = text + "X";
+            text += "X";
         if (view.getId() == R.id.Button_L)
-            text = text + "L";
+            text += "L";
         if (view.getId() == R.id.Button_C)
-            text = text + "C";
+            text += "C";
         if (view.getId() == R.id.Button_D)
-            text = text + "D";
+            text += "D";
         if (view.getId() == R.id.Button_M)
-            text = text + "M";
+            text += "M";
 
         textViewRoman.setText(text);
+
+        if (!text.isEmpty()) {
+            Converter converter = new Converter(text, this);
+            int arabic = converter.romanToArabic();
+            textViewArabic.setText(arabic != -1 ? String.valueOf(arabic) : "Błąd");
+        } else {
+            textViewArabic.setText("");
+        }
     }
 }
