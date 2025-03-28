@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void OnClickNumericButton(View view) {
         TextView textViewArabic = findViewById(R.id.ScreenArabic);
-        TextView textViewRoman = findViewById(R.id.ScreenRoman); // Nowe pole do aktualizacji wyniku
+        TextView textViewRoman = findViewById(R.id.ScreenRoman);
         String text = textViewArabic.getText().toString();
 
         if (view.getId() == R.id.Button_9)

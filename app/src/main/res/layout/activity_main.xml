@@ -154,7 +154,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="OnClickNumericButton"
-            android:text="1" />
+            android:text="1"
         />
     </LinearLayout>
 
@@ -187,7 +187,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="OnClickNumericButton"
-            android:text="DEL" />
+            android:text="DEL"
         />
 
     </LinearLayout>
