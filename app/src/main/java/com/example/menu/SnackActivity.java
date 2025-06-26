@@ -23,6 +23,11 @@ public class SnackActivity extends AppCompatActivity {
         TextView description = findViewById(R.id.snack_description);
         description.setText(snack.getDescription());
 
+//        TextView price = findViewById(R.id.snack_price);
+//        price.setText(snack.getPrice());
+
+
+
         ImageView photo = findViewById(R.id.snack_photo);
         photo.setImageResource(snack.getImageResourceId());
         photo.setContentDescription(snack.getName());

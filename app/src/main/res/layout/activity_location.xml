@@ -10,7 +10,8 @@
         android:id="@+id/location_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="15sp"
+        android:text="Nasza kawiarnia znajduje się pod adresem: ANMP 4 w Częstochowie"
         android:textStyle="bold"/>
 
     <TextView
