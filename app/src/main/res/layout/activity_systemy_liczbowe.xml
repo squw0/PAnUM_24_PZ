@@ -12,22 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="top|center"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="System Liczbowy"
-            android:textSize="20sp"
-            android:paddingBottom="8dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
         android:padding="16dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,9 +22,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wprowadź liczbę:"
-            android:textSize="20sp"
-            android:paddingBottom="8dp"/>
+            android:text="Systemy Liczbowe"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"/>
 
         <EditText
             android:id="@+id/inputNumber"
@@ -48,34 +33,41 @@
             android:layout_height="wrap_content"
             android:hint="Wpisz liczbę"
             android:inputType="numberDecimal"
-            android:padding="8dp"
-            android:background="@android:drawable/editbox_background"/>
+            android:padding="8dp"/>
+
+        <Spinner
+            android:id="@+id/fromSystemSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/toSystemSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
 
         <Button
             android:id="@+id/convertButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Konwertuj"
-            android:onClick="convertCurrency"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="24dp"/>
 
         <TextView
             android:id="@+id/resultText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wynik: "
-            android:backgroundTint="@color/white"
-            android:background="@color/white"
-            android:textSize="20sp"
-            android:padding="8dp"/>
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:background="#f0f0f0"/>
 
         <Button
             android:id="@+id/buttonBack"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Powrót do strony głównej"
-            android:onClick="goToMain"
-            android:layout_marginTop="16dp"/>
-
+            android:text="Powrót"
+            android:layout_marginTop="24dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
