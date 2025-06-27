@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     public void OnClickNumericButton(View view) {
         TextView textViewArabic = findViewById(R.id.ScreenArabic);
         TextView textViewRoman = findViewById(R.id.ScreenRoman);
@@ -92,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
         textViewRoman.setText(text);
 
-
         if (!text.isEmpty()) {
             Converter converter = new Converter(text, this);
             int arabic = converter.romanToArabic();
@@ -100,8 +98,5 @@ public class MainActivity extends AppCompatActivity {
         } else {
             textViewArabic.setText("");
         }
-
-
-
     }
 }
