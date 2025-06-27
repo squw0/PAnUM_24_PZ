@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">menu</string>
+    <string name="starbuzz_logo">Logo kafeterii</string>
+    <string name="drink_image">Obrazek napoju</string>
+    <string name="snack_image">Obrazek przekąski</string>
+    <string name="map_image">Mapa lokalizacji</string>
+    <string-array name="options">
+        <item>Napoje</item>
+        <item>Przekąski</item>
+        <item>Kafeterie</item>
+    </string-array>
+</resources>

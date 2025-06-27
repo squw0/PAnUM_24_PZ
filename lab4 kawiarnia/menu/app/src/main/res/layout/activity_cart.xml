@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powrót"/>
+
+    <TextView
+        android:id="@+id/emptyCartText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Koszyk jest pusty"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/cartListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/totalPriceText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:paddingTop="10dp"/>
+
+    <Button
+        android:id="@+id/clearCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wyczyść koszyk"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Złóż zamówienie"
+        android:backgroundTint="@color/green"/>
+</LinearLayout>
